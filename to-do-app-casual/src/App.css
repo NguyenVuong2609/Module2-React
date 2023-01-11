@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #ce665e;
+    color: white;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: #cf6b64;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* Style the "Add" button */
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    border: none;
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+
+  .tableTask {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  .tableTask tr th {
+    background-color: grey;
+  }
+  .tableTask tr th,td {
+    border: 1px solid black;
+    text-align: center;
+  }
+  .tableTask tr td input {
+    text-align: center;
+    width: 80%;
+    margin: 0 10%;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .finished {
+    background-color: green;
+    color: white;
+    text-decoration: line-through;
+  }
+  .finished td {
+    text-decoration: line-through;
+  }
+  table input {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: inherit;
+  }
