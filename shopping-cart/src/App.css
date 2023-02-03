@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.listProduct {
+  width: 45%;
+  border: 1px solid grey;
+}
+.listProduct div h2 {
+  background-color: aqua;
+  margin-top: 0;
+}
+.cart {
+  width: 45%;
+  border: 1px solid black;
+}
+.cart div h2 {
+  background-color: pink;
+  margin-top: 0;
+}
+.cart div table tr td input {
+  width: 30%;
+}
+.cart div table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.cart div table tr th,td {
+  border-bottom: 1px solid grey;
+}
+.product {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+}
+.product img {
+  width: 20%;
+}
+.detailProduct {
+  width: 60%;
+}
+.buttonProduct {
+  width: 20%;
+}
+.buttonProduct button {
+  font-size: 20px;
+  padding: 5px;
+}

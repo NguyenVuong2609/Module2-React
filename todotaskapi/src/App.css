@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+.InputList label {
+  color: blue;
+}
+.InputList input {
+  padding: 5px;
+  width: 15%;
+  margin-bottom: 20px;
+}
+.InputList button {
+  padding: 5px;
+}
+.InputList table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.InputList table tr td,th {
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+}
+.InputList table tr td input {
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+.header {
+   color: darksalmon;
+   font-size: 40px;
+   background-color:bisque;
+}
+th {
+  background-color: grey;
+  color: white;
+}
+.notifySuccess {
+  width: 60%;
+  margin: 10px 20%;
+  padding: 5px;
+  font-size: 22px;
+  background-color: green;
+  border-radius: 8px;
+  color: white;
+}
+.notifyFail {
+  width: 60%;
+  margin: 10px 20%;
+  padding: 5px;
+  font-size: 22px;
+  background-color: red;
+  border-radius: 8px;
+  color: black;
+}
