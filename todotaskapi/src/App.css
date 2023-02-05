@@ -58,3 +58,9 @@ th {
   border-radius: 8px;
   color: black;
 }
+.completedTask td{
+  background-color: #ffcf40;
+}
+.failedTask td {
+  background-color: red;
+}

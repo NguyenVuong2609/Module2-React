@@ -1,19 +1,19 @@
 {
   "toDoTask": [
     {
-      "name": "abc",
-      "status": "Pending",
+      "name": "Buy a Car Ferrari",
+      "status": "Completed",
+      "id": 1
+    },
+    {
+      "name": "Buy a House",
+      "status": "Completed",
+      "id": 2
+    },
+    {
+      "name": "Go to Da Nang",
+      "status": "Failed",
       "id": 3
-    },
-    {
-      "name": "xyz",
-      "status": "Pending",
-      "id": 4
-    },
-    {
-      "name": "123",
-      "status": "Pending",
-      "id": 5
     }
   ]
 }

@@ -13,7 +13,6 @@ export const act_update_name = (id , task) => {
     };
 };
 export const act_update_status = (id , task) => {
-    console.log(task);
     return {
         type: UPDATE_STATUS,
         payload: {id, task}

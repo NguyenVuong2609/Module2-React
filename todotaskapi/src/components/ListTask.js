@@ -24,6 +24,13 @@ export default function ListTask() {
     let elementTask = taskStock.map((task,index)=>{
         return <Task task={task} key={task.id} stt={index}/>
     })
+    const handleKeyUp = (e)=> {
+      if (e.keyCode == 13) {
+        dispatch(types.act_add_task(taskName, PENDING));
+        dispatch(types.act_change_notify(NOTIFY_ADD_SUCCESS));
+        setTaskName('');
+      }
+    }
   return (
     <div className="InputList">
       <label>Name of task:</label>
@@ -33,6 +40,7 @@ export default function ListTask() {
         name="taskName"
         value={taskName}
         onChange={(e)=> setTaskName(e.target.value)}
+        onKeyUp={handleKeyUp}
         placeholder="Write your task's name here"
       />
       <button onClick={handleAdd}>Add</button>

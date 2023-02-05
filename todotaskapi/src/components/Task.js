@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import * as types from '../actions/index';
-import {NOTIFY_DELETE_SUCCESS, NOTIFY_UPDATE_SUCCESS} from "../constants/messageNotify"
+import {NOTIFY_DELETE_SUCCESS, NOTIFY_UPDATE_SUCCESS, NOTIFY_READY} from "../constants/messageNotify"
 import { COMPLETED, FAILED, PENDING } from "../constants/status";
+import { COMPLETED_TASK, FAILED_TASK } from '../constants/classCss'
 
 export default function Task(props) {
   const dispatch = useDispatch();
   const { task, stt } = props;
   const [newName, setNewName] = useState(task.name);
   const handleDelete = ()=> {
-    dispatch(types.act_delete_task(task.id));
-    dispatch(types.act_change_notify(NOTIFY_DELETE_SUCCESS))
+    if (window.confirm('Are you sure?')){
+      dispatch(types.act_delete_task(task.id));
+      dispatch(types.act_change_notify(NOTIFY_DELETE_SUCCESS));
+    }
   };
   const handleFinish = ()=> {
     dispatch(types.act_update_status(task.id, {...task, status: (task.status== PENDING || task.status == FAILED)? COMPLETED : FAILED}));
@@ -29,8 +32,9 @@ export default function Task(props) {
       dispatch(types.act_change_notify(NOTIFY_UPDATE_SUCCESS));
     }
   };
+  let newClass = (task.status == COMPLETED)? COMPLETED_TASK : (task.status == FAILED) ? FAILED_TASK : "";
   return (
-    <tr key={task.id}>
+    <tr key={task.id} className={newClass}>
       <td>{stt + 1}</td>
       <td>
         <input
